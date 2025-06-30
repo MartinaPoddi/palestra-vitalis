@@ -1,0 +1,680 @@
+:root {
+    /* Colors */
+    --color-primary: #CE0022;
+    --color-secondary: #414651;
+    --color-accent: #FFC471;
+    --color-light: #F5F5F5;
+    --color-dark: #1D1D1D;
+    --color-gray: #A4A7AE;
+    --color-gray-light: #E0E0E0;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Typography */
+    --font-primary: 'Geologica', sans-serif;
+    --font-display: 'Orbitron', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+
+    /* Other UI Properties */
+    --border-radius: 4px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* RESET E BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    background-color: var(--color-light);
+    color: var(--color-secondary);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+header {
+    background: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+header nav {
+    background: none;
+}
+
+.elementi_header {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo_header {
+    justify-self: start;
+}
+
+.logo_header img {
+    height: 60px;
+    width: auto;
+}
+
+.testo_header {
+    justify-self: center;
+    text-align: center;
+}
+
+.testo_header h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.testo_header p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--color-white);
+}
+
+.menu-header {
+    justify-self: end;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-header a {
+    color: var(--color-white);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.menu-header a:hover {
+    color: var(--color-accent);
+}
+
+.fa-instagram {
+    font-size: 1.8rem;
+}
+
+/* MENU HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-white);
+    position: absolute;
+    right: 1rem;
+    top: 20%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    background-color: var(--color-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(206, 0, 34, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* NAVIGATION */
+nav {
+    background: var(--color-secondary);
+    position: relative;
+}
+
+nav ul,
+.mobile-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a,
+.mobile-menu li a {
+    color: var(--color-light);
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    font-weight: 500;
+}
+
+nav ul li a:hover,
+.mobile-menu li a:hover {
+    background: var(--color-primary);
+}
+
+/* MENU MOBILE */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-secondary);
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.mobile-menu.show {
+    display: flex;
+}
+
+.mobile-menu li {
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.mobile-menu li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu li a {
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 4px solid var(--color-primary);
+    gap: var(--spacing-md);
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: var(--color-light);
+    padding: 2rem;
+    background: rgba(29, 29, 29, 0.7);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.hero-content h2 {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    color: var(--color-accent);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    max-width: 600px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+/* CTA HERO */
+.hero .cta_sito {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.hero .cta_sito a {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(206, 0, 34, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-primary);
+}
+
+.hero .cta_sito a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 196, 113, 0.6);
+    border-color: var(--color-accent);
+}
+
+/* LAYOUT GENERALE */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* SEZIONE CORSI */
+.corsi {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+    background: var(--color-white);
+    padding: var(--spacing-md);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(65, 70, 81, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--color-accent);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    min-height: 200px;
+    flex-direction: row;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(60, 1, 11, 0.2);
+    border-left-color: var(--color-primary);
+}
+
+.box-content {
+    flex: 2;
+}
+
+.box-content h3 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.box-content p {
+    color: var(--color-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.box-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-image img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* LAYOUT BOX SPECIFICI */
+.box.functional .box-image,
+.box.dolce .box-image {
+    order: 2;
+}
+
+.box.functional .box-content,
+.box.dolce .box-content {
+    order: 1;
+}
+
+.box.pilates .box-image {
+    order: 1;
+}
+
+.box.pilates .box-content {
+    order: 2;
+}
+
+/* SEZIONE ORARI */
+.orari-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: var(--color-white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orari-section h2 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.orari-grid {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.orari-grid div {
+    padding: 1rem;
+    text-align: center;
+    border-right: 1px solid var(--color-light);
+    border-bottom: 1px solid var(--color-light);
+}
+
+.orari-grid div:nth-child(6n) {
+    border-right: none;
+}
+
+.giorni {
+    background: var(--color-accent);
+    color: black;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.orario {
+    font-weight: 600;
+    color: var(--color-primary);
+    background: var(--color-light);
+}
+
+.corso-functional {
+    background: rgba(206, 0, 34, 0.1);
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.corso-pilates {
+    background: rgba(255, 196, 113, 0.2);
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.corso-dolce {
+    background: rgba(65, 70, 81, 0.1);
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-dark);
+    color: var(--color-gray-light);
+    margin-top: 3rem;
+    font-weight: 300;
+}
+
+footer .container {
+    border-bottom: 1px solid var(--color-white);
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+}
+
+.dove {
+    justify-self: start;
+    text-align: left;
+}
+
+.contatti {
+    justify-self: end;
+    text-align: right;
+}
+
+.dove h4,
+.contatti h4 {
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.logo {
+    justify-self: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--color-gray-light);
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+.footer-instagram {
+    display: none;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.footer-instagram a {
+    color: var(--color-white);
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.footer-instagram a:hover {
+    color: var(--color-accent);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    /* HEADER MOBILE */
+    .menu-header {
+        display: none !important;
+    }
+    
+    .elementi_header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo_header,
+    .testo_header {
+        justify-self: center;
+    }
+    
+    /* NAVIGATION MOBILE */
+    .navMenu {
+        display: none !important;
+    }
+    
+    .hamburger {
+        display: block !important;
+    }
+    
+    /* HERO MOBILE */
+    .hero {
+        min-height: 50vh;
+        gap: var(--spacing-sm);
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .hero .cta_sito a {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    
+    /* LAYOUT MOBILE */
+    header {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* CORSI MOBILE */
+    .corsi {
+        margin-top: var(--spacing-md);
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .box {
+        flex-direction: column !important;
+        text-align: center;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm);
+    }
+    
+    .box-image {
+        order: 1 !important;
+    }
+    
+    .box-content {
+        order: 2 !important;
+    }
+    
+    .box-image img {
+        max-width: 100%;
+        width: 280px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .box-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .box-content p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    /* ORARI MOBILE */
+    .orari-section {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    .orari-grid div {
+        padding: 0.8rem 0.4rem;
+        font-size: 0.9rem;
+    }
+    
+    .orari-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* FOOTER MOBILE */
+    .footer-instagram {
+        display: block;
+    }
+    
+    .footer-info {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .dove,
+    .contatti {
+        justify-self: center;
+        text-align: center;
+    }
+}
+
+/* RESPONSIVE PICCOLI SCHERMI */
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero .cta_sito a {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .box-image img {
+        width: 250px;
+        height: 180px;
+    }
+    
+    .box-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .box-content p {
+        font-size: 0.9rem;
+    }
+    
+    .orari-grid div {
+        padding: 0.6rem 0.2rem;
+        font-size: 0.8rem;
+    }
+}

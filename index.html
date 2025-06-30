@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Palestra specializzata in functional training, pilates e ginnastica dolce. Lezioni per tutti i livelli, in un ambiente accogliente e professionale.">
+    <title>Palestra Vitalis | Benessere in movimento</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="favicon/favicon.ico">
+    <!-- icone social -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="elementi_header">
+            <div class="logo_header">
+                <img src="loghi/logo-bianco.svg" alt="logo bianco palestra vitalis">
+            </div>
+            <div class="testo_header">
+                <h1>Palestra Vitalis</h1>
+                <p>Benessere in movimento</p>
+            </div>
+            <nav class="menu-header">
+                <a href="https://www.instagram.com/vitalis_gym?igsh=MWk4Z3N2ZGNzNWF3Yg%3D%3D&utm_source=qr" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navMenu">
+            <li><a href="#functional">Functional Training</a></li>
+            <li><a href="#pilates">Pilates</a></li>
+            <li><a href="#dolce">Ginnastica Dolce</a></li>
+        </ul>
+        
+        <!-- Menu hamburger -->
+        <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <!-- Menu mobile (nascosto inizialmente) -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li><a href="#functional" onclick="closeMobileMenu()">Functional Training</a></li>
+            <li><a href="#pilates" onclick="closeMobileMenu()">Pilates</a></li>
+            <li><a href="#dolce" onclick="closeMobileMenu()">Ginnastica Dolce</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <img src="vitalis foto/palestra.jpg" alt="palestra vitalis a roma moderna e luminosa">
+        <div class="hero-content">
+            <h2>Dove il benessere prende forma</h2>
+            <p>Lezioni guidate da istruttori esperti in un ambiente attrezzato, moderno e professionale</p>
+        </div>
+
+        <div class="cta_sito">
+            <a href="http://sito-esame.local/" aria-label="Visita il sito WordPress di Palestra Vitalis">
+                Visita il Sito Completo
+            </a>
+        </div>
+    </section>
+
+    <section class="corsi">
+        <div class="box functional" id="functional">
+            <div class="box-content">
+                <h3>Functional Training</h3>
+                <p>Il <b>Functional Training</b> è l'allenamento ideale per migliorare <b>forza, resistenza e mobilità </b> con esercizi mirati che riproducono i movimenti della vita quotidiana. 
+                    Grazie a questa metodologia, potenzi muscoli, articolazioni e postura in modo completo e sicuro. Allenamento funzionale significa lavorare su <b> equilibrio, stabilità e coordinazione </b>, 
+                    riducendo il rischio di infortuni. Scopri i nostri corsi di Functional Training, adatti a tutti i livelli, per ottenere un corpo più tonico, reattivo ed efficiente.</p>
+            </div>
+            <div class="box-image">
+                <img src="vitalis foto/functional.jpg" alt="Allenamento functional training in palestra vitalis">
+            </div>
+        </div>
+        
+        <div class="box pilates" id="pilates">
+            <div class="box-image">
+                <img src="vitalis foto/pilates.jpg" alt="Lezione di pilates nella palestra vitalis roma">
+            </div>
+            <div class="box-content">
+                <h3>Pilates</h3>
+                <p>Il <b>Pilates </b> è un metodo di allenamento che migliora forza, <b>flessibilità e controllo del corpo</b>, partendo dal rafforzamento del core, ovvero muscoli addominali e lombari.
+                    Con esercizi mirati, il Pilates aiuta a correggere la postura, <b> prevenire dolori alla schiena e aumentare l'equilibrio </b>. È ideale per chi desidera tonificare il corpo e migliorare la respirazione. Scopri i benefici del Pilates e ritrova il benessere fisico e mentale con lezioni adatte a ogni livello.</p>
+            </div>
+        </div>
+        
+        <div class="box dolce" id="dolce">
+            <div class="box-content">
+                <h3>Ginnastica Dolce</h3>
+                <p>La <b>ginnastica dolce</b> è perfetta per chi desidera mantenersi in forma in modo graduale e senza stress per il corpo. Attraverso movimenti lenti, controllati e semplici, migliora la mobilità articolare, la <b>postura</b> e il benessere generale. Questo tipo di allenamento è indicato per <b>anziani, principianti o chi cerca un'attività leggera</b>,ma efficace. La ginnastica dolce aiuta anche a rilassare mente e corpo, riducendo tensioni e migliorando la qualità della vita.</p>
+            </div>
+            <div class="box-image">
+                <img src="vitalis foto/ginnastica dolce.jpg" alt="Ginnastica dolce nella palestra vitalis a roma">
+            </div>
+        </div>
+    </section>
+
+    <div class="orari-section">
+        <h2>Orari delle Lezioni</h2>
+        <div class="orari-grid">
+            <!-- Riga 1 con giorni settimana -->
+            <div class="giorni">Orario</div>
+            <div class="giorni">Lunedì</div>
+            <div class="giorni">Martedì</div>
+            <div class="giorni">Mercoledì</div>
+            <div class="giorni">Giovedì</div>
+            <div class="giorni">Venerdì</div>
+            
+            <!-- Riga 09:00 -->
+            <div class="orario">09:00</div>
+            <div class="corso-functional">Functional Training</div>
+            <div class="corso-pilates">Pilates</div>
+            <div class="corso-functional">Functional Training</div>
+            <div class="corso-dolce">Ginnastica Dolce</div>
+            <div class="corso-pilates">Pilates</div>
+            
+            <!-- Riga 10:30 -->
+            <div class="orario">10:30</div>
+            <div class="corso-dolce">Ginnastica Dolce</div>
+            <div class="corso-functional">Functional Training</div>
+            <div class="corso-pilates">Pilates</div>
+            <div class="corso-functional">Functional Training</div>
+            <div class="corso-dolce">Ginnastica Dolce</div>
+            
+            <!-- Riga 18:00 -->
+            <div class="orario">18:00</div>
+            <div class="corso-pilates">Pilates</div>
+            <div class="corso-dolce">Ginnastica Dolce</div>
+            <div class="corso-dolce">Ginnastica Dolce</div>
+            <div class="corso-pilates">Pilates</div>
+            <div class="corso-functional">Functional Training</div>
+            
+            <!-- Riga 19:30 -->
+            <div class="orario">19:30</div>
+            <div class="corso-functional">Functional Training</div>
+            <div class="corso-pilates">Pilates</div>
+            <div class="corso-functional">Functional Training</div>
+            <div class="corso-dolce">Ginnastica Dolce</div>
+            <div class="corso-pilates">Pilates</div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footer-instagram">
+            <a href="https://www.instagram.com/vitalis_gym" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
+        <div class="container">
+            <section class="footer-info">
+                <div class="dove">
+                    <h4>Dove siamo</h4>
+                    <p>Via Roma 123<br>00100 Roma (RM)<br>Italia</p>
+                </div>
+                <div class="logo">
+                    <img src="loghi/logo-bianco.svg" alt="logo bianco palestra roma vitalis">
+                </div>
+                <div class="contatti">
+                    <h4>Contatti</h4>
+                    <p>Tel: +39 06 1234567<br>Email: info@palestravitalis.it</p>
+                </div>
+            </section>
+        </div>
+        <p>2025 Palestra Vitalis - Tutti i diritti riservati</p>
+        <div class="footer-links">
+            <a href="normative/COOKIE POLICY.pdf" download="">Cookie Policy</a>
+            <a href="normative/INFORMATIVA SULLA PRIVACY.pdf" download>Privacy</a>
+        </div>
+
+        
+
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            const icon = hamburger.querySelector('i');
+            
+            mobileMenu.classList.toggle('show');
+            
+            if (mobileMenu.classList.contains('show')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            const icon = hamburger.querySelector('i');
+            
+            mobileMenu.classList.remove('show');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+
+        // Chiudi menu se si clicca fuori
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
